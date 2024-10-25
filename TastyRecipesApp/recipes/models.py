@@ -34,6 +34,11 @@ class Recipe(models.Model):
         help_text="Provide the cooking time in minutes."
     )
 
+    instructions = models.TextField(
+        null=False,
+        blank=False,
+    )
+
     cooking_time = models.PositiveIntegerField(
         validators=[
             MinValueValidator(1)

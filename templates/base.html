@@ -18,8 +18,8 @@
         {% if not profile_exists %}
             <a href="{% url 'profile-create' %}">Create Profile</a>
         {% else %}
-                <a href="#">Catalogue</a>
-                <a href="#">Create Recipe</a>
+                <a href="{% url "catalogue" %}">Catalogue</a>
+                <a href="{% url "recipe-create" %}">Create Recipe</a>
                 <a href="#">Profile</a>
             {% endif %}
         </nav>
