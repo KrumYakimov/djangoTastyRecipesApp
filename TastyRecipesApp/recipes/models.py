@@ -45,3 +45,10 @@ class Recipe(models.Model):
         null=True,
         blank=True
     )
+
+    author = models.ForeignKey(
+        to="profiles.Profile",
+        on_delete=models.CASCADE,
+        related_name="authors",
+        editable=False
+    )
